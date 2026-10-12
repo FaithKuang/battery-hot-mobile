@@ -1,5 +1,7 @@
 # Battery Hot 手机阅读版
 
+手机访问：[https://faithkuang.github.io/battery-hot-mobile/](https://faithkuang.github.io/battery-hot-mobile/)。2026-10-12 已完成真实云端免费采集、Pages 部署及 HTTPS/资源/RSS 验证；手机宽度浏览器已验证，尚非实体 iPhone 实测。
+
 公开仓库：`FaithKuang/battery-hot-mobile`。此版是 GitHub Pages 静态只读阅读器，不是将本机 PostgreSQL 或管理后台暴露到公网，也不代表本地重建站已经通过七天迁移验收。
 
 ## 数据与费用
