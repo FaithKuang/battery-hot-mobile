@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#176449"><meta name="description" content="全球锂电与 AIDC / BBU 新闻，免费每日更新，直达原文。">
+  <meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Battery Hot">
+  <title>BATTERY HOT · 全球电池与供电技术雷达</title>
+  <link rel="icon" href="./icon.png"><link rel="apple-touch-icon" href="./apple-icon.png">
+  <link rel="manifest" href="./manifest.webmanifest"><link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="brand"><img src="./icon.png" width="48" height="48" alt=""><div><strong>BATTERY HOT</strong><p>全球电池与供电技术雷达</p></div><button id="refresh" aria-label="检查网页更新">刷新</button></header>
+  <div class="layout"><nav aria-label="主要栏目" class="navigation">
+    <a href="#all">全部动态</a><a href="#aidc">AIDC / BBU</a><a href="#nvidia">NVIDIA</a><a href="#selected">严格精选</a><a href="#daily">每日简报</a>
+  </nav><main id="main">
+    <div id="status" role="status">正在读取公开新闻…</div>
+    <div class="heading"><div><p class="eyebrow" id="kicker">DAILY RADAR</p><h1 id="heading">全部动态</h1></div><span id="count"></span></div>
+    <p id="description" class="description"></p>
+    <div id="controls"><label class="search"><span>搜索</span><input id="search" type="search" placeholder="公司、技术、BBU…" autocomplete="off"></label><label class="period">时间<select id="period"><option value="7">最近 7 天</option><option value="30" selected>最近 30 天</option><option value="0">全部已收录</option></select></label></div>
+    <div id="companies" class="chips" aria-label="重点企业筛选"></div>
+    <div id="content" aria-live="polite"></div>
+    <button id="more" hidden>加载更多</button>
+    <details id="source-status"><summary>信源读取状态与覆盖边界</summary><div id="source-list"></div></details>
+    <footer>个人阅读版 · 免费采集 · 每天北京时间 09:00 启动更新（可能排队延迟）。<br>仅展示标题、摘要／短摘录及原文链接，不分发全文。<br><a href="./feed/all.xml">全部动态 RSS</a> · <a href="#notice">使用与隐私说明</a><br>基于 AIHOT 开源框架，原文版权归各信源所有。</footer>
+  </main></div>
+  <noscript>请启用 JavaScript 浏览新闻，或使用<a href="./feed/all.xml">RSS</a>。</noscript>
+  <script type="module" src="./app.js"></script>
+</body></html>

@@ -1,0 +1,1944 @@
+{
+  "$comment": "BATTERY HOT priority and verified RSS feeds. Disabled web_list entries require selector/date/direct-link validation before activation.",
+  "sources": [
+    {
+      "id": "aerospace-testing-applications",
+      "name": "Aerospace Testing International",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.aerospacetestinginternational.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "ars-ai-hardware",
+      "name": "Ars Technica",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://feeds.arstechnica.com/arstechnica/index",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "automation-news-robotics",
+      "name": "Automation News",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://automationnews.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "batteries-international",
+      "name": "Batteries International",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.batteriesinternational.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "batteries-news",
+      "name": "Batteries News",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.batteriesnews.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "battery-news-de",
+      "name": "Battery-News.de English",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://battery-news.de/en/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "battery-power-online",
+      "name": "Battery Power Online",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.batterypoweronline.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "best-magazine",
+      "name": "BEST Magazine",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.bestmag.co.uk/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "blocks-files-infrastructure",
+      "name": "Blocks & Files",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://blocksandfiles.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "business-korea-battery",
+      "name": "BusinessKorea",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.businesskorea.co.kr/rss/allArticle.xml",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "carnewschina",
+      "name": "CarNewsChina",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://carnewschina.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "charged-evs",
+      "name": "Charged EVs",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://chargedevs.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "china-energy-portal",
+      "name": "China Energy Portal",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://chinaenergyportal.org/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "cleantechnica",
+      "name": "CleanTechnica",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://cleantechnica.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "cnevpost",
+      "name": "CnEVPost",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://cnevpost.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "cnevpost-battery",
+      "name": "CnEVPost Battery",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://cnevpost.com/battery/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "cnevpost-catl",
+      "name": "CnEVPost CATL",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://cnevpost.com/catl/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "cnevpost-policy",
+      "name": "CnEVPost Policy",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://cnevpost.com/policy/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "datacenterdynamics-backup-power",
+      "name": "Data Center Dynamics",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.datacenterdynamics.com/en/rss/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "defence-blog-applications",
+      "name": "Defence Blog",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://defence-blog.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "dps-telecom-backup-power",
+      "name": "DPS Telecom",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.dpstele.com/dpsnews/rss/news.php",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "dronelife-applications",
+      "name": "DroneLife",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://dronelife.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "eetimes-technology",
+      "name": "EE Times",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.eetimes.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "electrek",
+      "name": "Electrek",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://electrek.co/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "electric-hybrid-marine-tech",
+      "name": "Electric & Hybrid Marine Technology",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.electrichybridmarinetechnology.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "electric-hybrid-vehicle-tech",
+      "name": "Electric & Hybrid Vehicle Technology",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.electrichybridvehicletechnology.com/feed",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "electrive",
+      "name": "electrive",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.electrive.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "enovix-news",
+      "name": "Enovix Newsroom",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://ir.enovix.com/rss/news-releases.xml",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "evreporter-applications",
+      "name": "EVreporter",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://evreporter.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "future-transport-news",
+      "name": "Future Transport-News",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://futuretransport-news.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "green-cubes-technology-news",
+      "name": "Green Cubes Technology",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://greencubestech.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "ieee-spectrum-energy",
+      "name": "IEEE Spectrum Energy",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://spectrum.ieee.org/feeds/topic/energy.rss",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "innovation-news-battery",
+      "name": "Innovation News Network",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.innovationnewsnetwork.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "insideevs-battery",
+      "name": "InsideEVs Battery Tech",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://insideevs.com/rss/category/battery-tech/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "interesting-engineering-battery",
+      "name": "Interesting Engineering",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://interestingengineering.com/rss",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "international-mining-applications",
+      "name": "International Mining",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://im-mining.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "inventus-power-news",
+      "name": "Inventus Power",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://inventuspower.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "lges-newsroom",
+      "name": "LG Energy Solution Newsroom",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://news.lgensol.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "macrumors-ai-hardware",
+      "name": "MacRumors",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://feeds.macrumors.com/MacRumors-All",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "marinelink-applications",
+      "name": "MarineLink",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.marinelink.com/news/rss",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "mining-com",
+      "name": "MINING.COM",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.mining.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "mit-battery-research",
+      "name": "MIT News · Batteries",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://news.mit.edu/topic/mitbatteries-rss.xml",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "molicel-newsroom",
+      "name": "Molicel Newsroom",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.molicel.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "nasa-aeronautics",
+      "name": "NASA · Aeronautics",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.nasa.gov/aeronautics/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "nasa-glenn",
+      "name": "NASA · Glenn Research Center",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.nasa.gov/centers-and-facilities/glenn/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "nasa-technology",
+      "name": "NASA · Technology",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.nasa.gov/technology/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "naval-news-applications",
+      "name": "Naval News",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.navalnews.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "next-platform-infrastructure",
+      "name": "The Next Platform",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.nextplatform.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "nvidia-blog",
+      "name": "NVIDIA 官方博客",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://blogs.nvidia.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "nvidia-developer",
+      "name": "NVIDIA 技术博客与白皮书",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://developer.nvidia.com/blog/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "nvidia-news",
+      "name": "NVIDIA 官方新闻",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://nvidianews.nvidia.com/releases.xml",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "nvidia-research",
+      "name": "NVIDIA 研究论文",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://research.nvidia.com/rss.xml",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "openai-news-hardware",
+      "name": "OpenAI News",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://openai.com/news/rss.xml",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "panasonic-energy-news",
+      "name": "Panasonic Energy Newsroom",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://news.panasonic.com/global/rss/company/63.xml",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "policy-eu-press-corner",
+      "name": "European Commission Press Corner",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://ec.europa.eu/commission/presscorner/api/rss?language=en",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "policy-india-pib",
+      "name": "India Press Information Bureau",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=3",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "policy-uk-gov-battery",
+      "name": "GOV.UK · Battery Policy",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.gov.uk/search/news-and-communications.atom?keywords=battery",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "power-electronics-news",
+      "name": "Power Electronics News",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.powerelectronicsnews.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "protoolreviews-applications",
+      "name": "Pro Tool Reviews",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.protoolreviews.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "railway-gazette-applications",
+      "name": "Railway Gazette",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.railwaygazette.com/rss",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "register-infrastructure",
+      "name": "The Register",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.theregister.com/headlines.atom",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rideapart-electric-motorcycles",
+      "name": "RideApart · Electric Motorcycles",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.rideapart.com/rss/category/electric-motorcycles/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "robot-report-applications",
+      "name": "The Robot Report",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.therobotreport.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "satellite-today-applications",
+      "name": "Via Satellite",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.satellitetoday.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "sciencedaily-batteries",
+      "name": "ScienceDaily Batteries",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.sciencedaily.com/rss/matter_energy/batteries.xml",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "scitechdaily-battery",
+      "name": "SciTechDaily Battery Technology",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://scitechdaily.com/tag/battery-technology/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "site-amprius-news",
+      "name": "Amprius Technologies",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://amprius.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "site-factorial-news",
+      "name": "Factorial Energy Newsroom",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://ir.factorialenergy.com/rss/news-releases.xml",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "site-prologium-news",
+      "name": "ProLogium",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://prologium.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "site-quantumscape-blog",
+      "name": "QuantumScape Investor News",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://ir.quantumscape.com/rss/news-releases.xml",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "spacenews-applications",
+      "name": "SpaceNews · LEO / Space Applications",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://spacenews.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "sustainable-bus-applications",
+      "name": "Sustainable Bus",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.sustainable-bus.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "techcrunch-ai-hardware",
+      "name": "TechCrunch",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://techcrunch.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "techxplore-energy",
+      "name": "Tech Xplore Energy",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://techxplore.com/rss-feed/energy-green-tech-news/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "tenpower-newsroom",
+      "name": "Tenpower 天鹏电源",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.tenpowercell.com.cn/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "thepack-two-wheelers",
+      "name": "THE PACK",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://thepack.news/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "uas-vision-applications",
+      "name": "UAS Vision",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.uasvision.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "ultralife-news",
+      "name": "Ultralife Corporation",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.ultralifecorporation.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "verge-ai-hardware",
+      "name": "The Verge",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.theverge.com/rss/index.xml",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "vertical-aviation-applications",
+      "name": "Vertical Magazine",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://verticalmag.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "锂电"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "lges-inside",
+      "name": "LG Energy Solution Battery Inside",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://inside.lgensol.com/en/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "LGES",
+        "官方"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "highgong-lithium",
+      "name": "高工锂电",
+      "kind": "web_list",
+      "config": {
+        "url": "https://www.gg-lb.com/",
+        "itemSelector": "article",
+        "linkSelector": "a",
+        "titleSelector": "h2",
+        "publishedAtSelector": "time",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "待验证"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": false
+    },
+    {
+      "id": "samsung-sdi-global",
+      "name": "Samsung SDI Global Newsroom",
+      "kind": "web_list",
+      "config": {
+        "url": "https://news.samsungsdi.com/global/",
+        "itemSelector": ".list__item",
+        "linkSelector": ".title a",
+        "titleSelector": ".title a",
+        "publishedAtSelector": ".date",
+        "publishedAtUtcOffset": "+09:00",
+        "allowUrlPrefixes": ["https://news.samsungsdi.com/global/click?seq="],
+        "itemUrlPrefixRewrite": {
+          "from": "https://news.samsungsdi.com/global/click?seq=",
+          "to": "https://news.samsungsdi.com/global/articleView?seq="
+        },
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "电芯/电池包"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": true
+    },
+    {
+      "id": "delta-press",
+      "name": "Delta Press Center",
+      "kind": "web_list",
+      "config": {
+        "url": "https://www.deltaww.com/en-US/press",
+        "adapter": "battery_supplier_news",
+        "allowUrlPrefixes": ["https://www.deltaww.com/en-US/press/"],
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": ["Delta", "AIDC"],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": true
+    },
+    {
+      "id": "delta-brandnews",
+      "name": "Delta Brand News",
+      "kind": "web_list",
+      "config": {
+        "url": "https://brandnews.deltaww.com/EN/Special",
+        "itemSelector": "article.news-card",
+        "linkSelector": "a",
+        "titleSelector": "h2, h3",
+        "allowUrlPrefixes": ["https://brandnews.deltaww.com/EN/SpecialDetail/"],
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": ["Delta", "月刊日期待核"],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": false
+    },
+    {
+      "id": "infineon-press",
+      "name": "Infineon Press",
+      "kind": "web_list",
+      "config": {
+        "url": "https://www.infineon.com/about/press",
+        "itemSelector": "article",
+        "linkSelector": "a",
+        "titleSelector": "h2",
+        "publishedAtSelector": "time",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "待验证"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": false
+    },
+    {
+      "id": "infineon-blog",
+      "name": "Infineon Official Blog",
+      "kind": "web_list",
+      "config": {
+        "url": "https://community.infineon.com/t5/Blogs/bg-p/Blogs",
+        "itemSelector": "article",
+        "linkSelector": "a",
+        "titleSelector": "h2",
+        "publishedAtSelector": "time",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "待验证"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": false
+    },
+    {
+      "id": "vertiv-news",
+      "name": "Vertiv News and Events",
+      "kind": "web_list",
+      "config": {
+        "url": "https://www.vertiv.com/en-us/about/news-and-events/home/",
+        "itemSelector": "article",
+        "linkSelector": "a",
+        "titleSelector": "h2",
+        "publishedAtSelector": "time",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "待验证"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": false
+    },
+    {
+      "id": "vertiv-blog",
+      "name": "Vertiv Blog",
+      "kind": "web_list",
+      "config": {
+        "url": "https://www.vertiv.com/en-us/about/news-and-events/",
+        "itemSelector": "article",
+        "linkSelector": "a",
+        "titleSelector": "h2",
+        "publishedAtSelector": "time",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "待验证"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": false
+    },
+    {
+      "id": "simplo-news",
+      "name": "新普科技 · 官方新闻",
+      "kind": "web_list",
+      "config": {
+        "url": "https://www.simplo.com.tw/article.php?lang=tw&tb=6",
+        "adapter": "battery_supplier_news",
+        "allowUrlPrefixes": ["https://www.simplo.com.tw/article_d.php?lang=tw&tb=6&"],
+        "_aihot": { "initialBackfillLimit": 20 }
+      },
+      "tier": "T1", "first_party": true, "owner_entity_id": "simplo",
+      "participation_mode": "editorial", "interval_minutes": 1440, "tags": ["新普科技"],
+      "site_fulltext": false, "syndicate_fulltext": false, "enabled": true
+    },
+    {
+      "id": "aes-news",
+      "name": "AES-KY · 官方新闻",
+      "kind": "web_list",
+      "config": {
+        "url": "https://www.advancedenergysolution.com.tw/article.php?lang=tw&tb=6",
+        "adapter": "battery_supplier_news",
+        "allowUrlPrefixes": ["https://www.advancedenergysolution.com.tw/article_d.php?lang=tw&tb=6&"],
+        "_aihot": { "initialBackfillLimit": 20 }
+      },
+      "tier": "T1", "first_party": true, "owner_entity_id": "aes",
+      "participation_mode": "editorial", "interval_minutes": 1440, "tags": ["AES-KY"],
+      "site_fulltext": false, "syndicate_fulltext": false, "enabled": true
+    },
+    {
+      "id": "stl-news",
+      "name": "新盛力 · 官方新闻",
+      "kind": "web_list",
+      "config": {
+        "url": "https://www.stl-tech.com/news_list.asp",
+        "adapter": "battery_supplier_news",
+        "itemSelector": "article", "linkSelector": "h2 a", "titleSelector": "h2",
+        "publishedAtSelector": ".themeta span",
+        "allowUrlPrefixes": ["https://www.stl-tech.com/news_info.asp?id="],
+        "_aihot": { "initialBackfillLimit": 20 }
+      },
+      "tier": "T1", "first_party": true, "owner_entity_id": "stl",
+      "participation_mode": "editorial", "interval_minutes": 1440, "tags": ["新盛力"],
+      "site_fulltext": false, "syndicate_fulltext": false, "enabled": true
+    },
+    {
+      "id": "dynapack-news",
+      "name": "顺达 · 官网资料（新闻入口待核）",
+      "kind": "web_list",
+      "config": { "url": "https://www.dynapack.com.tw/h/data?key=iczce&set=9", "itemSelector": "article", "linkSelector": "a", "titleSelector": "h2" },
+      "tier": "T1", "first_party": true, "owner_entity_id": "dynapack",
+      "participation_mode": "editorial", "interval_minutes": 1440, "tags": ["顺达", "待验证"],
+      "site_fulltext": false, "syndicate_fulltext": false, "enabled": false
+    },
+    {
+      "id": "liteon-news",
+      "name": "光宝 · 官方新闻与专家观点",
+      "kind": "web_list",
+      "config": {
+        "url": "https://www.liteon.com/zh-tw/news/press-center",
+        "itemSelector": ".news-list li",
+        "linkSelector": "a[href*='/news/press-center/content/']", "titleSelector": "a[href*='/news/press-center/content/']",
+        "publishedAtRegex": "(\\d{4}/\\d{2}/\\d{2})", "publishedAtUtcOffset": "+08:00",
+        "allowUrlPrefixes": ["https://www.liteon.com/zh-tw/news/press-center/content/"],
+        "_aihot": { "initialBackfillLimit": 20 }
+      },
+      "tier": "T1", "first_party": true, "owner_entity_id": "liteon",
+      "participation_mode": "editorial", "interval_minutes": 1440, "tags": ["光宝", "AIDC"],
+      "site_fulltext": false, "syndicate_fulltext": false, "enabled": true
+    },
+    {
+      "id": "aes-media", "name": "科技新报 · AES-KY",
+      "kind": "rss", "config": { "feedUrl": "https://technews.tw/tag/aes-ky/feed/", "_aihot": { "initialBackfillLimit": 20 } },
+      "tier": "T2", "first_party": false, "participation_mode": "editorial", "interval_minutes": 1440, "tags": ["AES-KY"],
+      "site_fulltext": false, "syndicate_fulltext": false, "enabled": true
+    },
+    {
+      "id": "liteon-media", "name": "科技新报 · 光宝科",
+      "kind": "rss", "config": { "feedUrl": "https://technews.tw/tag/光寶科/feed/", "_aihot": { "initialBackfillLimit": 20 } },
+      "tier": "T2", "first_party": false, "participation_mode": "editorial", "interval_minutes": 1440, "tags": ["光宝", "AIDC"],
+      "site_fulltext": false, "syndicate_fulltext": false, "enabled": true
+    },
+    {
+      "id": "dynapack-media", "name": "科技新报 · 顺达",
+      "kind": "rss", "config": { "feedUrl": "https://technews.tw/tag/順達/feed/", "_aihot": { "initialBackfillLimit": 20 } },
+      "tier": "T2", "first_party": false, "participation_mode": "editorial", "interval_minutes": 1440, "tags": ["顺达"],
+      "site_fulltext": false, "syndicate_fulltext": false, "enabled": true
+    },
+    {
+      "id": "aidc-technews", "name": "科技新报 · BBU",
+      "kind": "rss", "config": { "feedUrl": "https://technews.tw/tag/bbu/feed/", "_aihot": { "initialBackfillLimit": 20 } },
+      "tier": "T2", "first_party": false, "participation_mode": "editorial", "interval_minutes": 1440, "tags": ["BBU/UPS", "AIDC"],
+      "site_fulltext": false, "syndicate_fulltext": false, "enabled": true
+    },
+    {
+      "id": "nvidia-resources",
+      "name": "NVIDIA Reports and Whitepapers",
+      "kind": "web_list",
+      "config": {
+        "url": "https://resources.nvidia.com/",
+        "itemSelector": "article",
+        "linkSelector": "a",
+        "titleSelector": "h2",
+        "publishedAtSelector": "time",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 1440,
+      "tags": [
+        "待验证"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "enabled": false
+    }
+  ]
+}

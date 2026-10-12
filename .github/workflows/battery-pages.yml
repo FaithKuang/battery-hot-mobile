@@ -1,0 +1,79 @@
+name: Battery Hot daily news
+on:
+  schedule:
+    - cron: '0 1 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths-ignore: ['public-data/**']
+concurrency:
+  group: battery-pages
+  cancel-in-progress: false
+permissions:
+  contents: read
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    permissions:
+      contents: write
+      pages: write
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_USER: batteryhot
+          POSTGRES_HOST_AUTH_METHOD: trust
+          POSTGRES_DB: batteryhot_pages_ci
+        ports: ['5432:5432']
+        options: >-
+          --health-cmd 'pg_isready -U batteryhot -d batteryhot_pages_ci'
+          --health-interval 5s --health-timeout 5s --health-retries 10
+    env:
+      DATABASE_URL: postgres://batteryhot@127.0.0.1:5432/batteryhot_pages_ci
+      BATTERY_MODE: 'true'
+      MODEL_CALLS_ENABLED: 'false'
+      COLLECT_ENABLED: 'false'
+      FEISHU_CONTENT_PUSH_ENABLED: 'false'
+      FEISHU_OPS_PUSH_ENABLED: 'false'
+      INDEXNOW_SUBMIT_ENABLED: 'false'
+      PAGES_SITE_URL: https://faithkuang.github.io/battery-hot-mobile/
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: npm run pages:test
+      - run: node scripts/migrate.ts && node scripts/seed.ts
+      - run: npm run pages:refresh
+      - run: npm run pages:export -- public-data/news.json .data/pages-run.json
+      - run: npm run pages:build && npm run verify:secrets
+      - name: Preserve only reviewed public news history
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add public-data/news.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Update public news snapshot [skip ci]'
+            git push origin HEAD:main
+          fi
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist/pages
+          retention-days: 1
+  deploy:
+    needs: collect
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publish mobile reader
+        id: deployment
+        uses: actions/deploy-pages@v4

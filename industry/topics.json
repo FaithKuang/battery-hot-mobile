@@ -1,0 +1,154 @@
+{
+  "exportedAt": "2026-09-29",
+  "groups": [
+    {
+      "key": "company",
+      "name": "企业",
+      "blurb": "按企业查看官方与专业来源"
+    },
+    {
+      "key": "field",
+      "name": "技术与应用",
+      "blurb": "按技术和供电应用浏览"
+    },
+    {
+      "key": "genre",
+      "name": "资料类型",
+      "blurb": "报告和白皮书"
+    }
+  ],
+  "topics": [
+    {
+      "slug": "lg-energy-solution",
+      "name": "LG Energy Solution",
+      "group": "company",
+      "entityId": "lges",
+      "tags": [
+        "LGES",
+        "entity:lges"
+      ],
+      "definition": "LGES 官方技术、产品和产业动态。",
+      "related": []
+    },
+    {
+      "slug": "samsung-sdi",
+      "name": "Samsung SDI",
+      "group": "company",
+      "entityId": "samsung_sdi",
+      "tags": [
+        "Samsung SDI",
+        "entity:samsung_sdi"
+      ],
+      "definition": "三星 SDI 电芯、电池包及应用动态。",
+      "related": []
+    },
+    {
+      "slug": "panasonic-energy",
+      "name": "Panasonic Energy",
+      "group": "company",
+      "entityId": "panasonic_energy",
+      "tags": [
+        "Panasonic Energy",
+        "entity:panasonic_energy"
+      ],
+      "definition": "松下能源的电池技术和产品。",
+      "related": []
+    },
+    {
+      "slug": "nvidia",
+      "name": "NVIDIA 官方监控",
+      "group": "company",
+      "entityId": "nvidia",
+      "tags": [
+        "NVIDIA",
+        "entity:nvidia"
+      ],
+      "definition": "仅监控配置的 NVIDIA 官方新闻、博客、研究及报告。",
+      "related": []
+    },
+    {
+      "slug": "delta",
+      "name": "台达",
+      "group": "company",
+      "entityId": "delta",
+      "tags": [
+        "Delta",
+        "entity:delta"
+      ],
+      "definition": "台达电池及数据中心供电。",
+      "related": []
+    },
+    {
+      "slug": "infineon",
+      "name": "英飞凌",
+      "group": "company",
+      "entityId": "infineon",
+      "tags": [
+        "Infineon",
+        "entity:infineon"
+      ],
+      "definition": "英飞凌电池与数据中心供电器件。",
+      "related": []
+    },
+    {
+      "slug": "vertiv",
+      "name": "维谛",
+      "group": "company",
+      "entityId": "vertiv",
+      "tags": [
+        "Vertiv",
+        "entity:vertiv"
+      ],
+      "definition": "维谛 BBU、UPS 及数据中心供电。",
+      "related": []
+    },
+    {
+      "slug": "solid-state",
+      "name": "固态与半固态",
+      "group": "field",
+      "entityId": null,
+      "tags": [
+        "固态/半固态"
+      ],
+      "definition": "固态与半固态电池材料、电芯及制造工艺。",
+      "related": []
+    },
+    {
+      "slug": "bbu-ups",
+      "name": "BBU / UPS",
+      "group": "field",
+      "entityId": null,
+      "tags": [
+        "BBU/UPS",
+        "数据中心供电"
+      ],
+      "definition": "AI 数据中心备电与供电架构。",
+      "related": []
+    },
+    {
+      "slug": "battery-applications",
+      "name": "增量应用",
+      "group": "field",
+      "entityId": null,
+      "tags": [
+        "新应用",
+        "机器人",
+        "无人机",
+        "电动交通"
+      ],
+      "definition": "有可核验电池或供电证据的新应用。",
+      "related": []
+    },
+    {
+      "slug": "whitepapers",
+      "name": "报告与白皮书",
+      "group": "genre",
+      "entityId": null,
+      "tags": [
+        "白皮书"
+      ],
+      "definition": "可信来源的技术报告和白皮书。",
+      "related": []
+    }
+  ]
+}
