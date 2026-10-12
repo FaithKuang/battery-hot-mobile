@@ -63,3 +63,8 @@ test("Pages rejects generic cells, unrelated science and warfare even if a stale
     assert.equal(publicItem(item({ title, sourceTitle: title, summary: null }), curated, now), null, title);
   }
 });
+test("Pages excludes explicit sponsored articles and leadership award announcements", () => {
+  assert.equal(publicItem(item({ kind: "extract-only", summary: "原文摘录：Sponsored by H.B. Fuller. Battery thermal management by design." }), curated, now), null);
+  assert.equal(publicItem(item({ sourceTitle: "BCI honours first NextGen Leadership Award recipients at Philadelphia event",
+    summary: "Battery Council International has formally honoured the inaugural recipients." }), curated, now), null);
+});

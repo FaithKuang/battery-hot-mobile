@@ -56,6 +56,8 @@ export function publicItem(input: PagesItem, curatedIds: Set<string>, now: Date)
     || !Number.isFinite(Date.parse(input.publishedAt)) || Date.parse(input.publishedAt) > now.getTime()) return null;
   // Recheck the visible article lead, not a whole page's related links or generic "cells".
   const lead = `${input.sourceTitle} ${(input.summary ?? "").slice(0, 300)}`;
+  if (/sponsored (?:by|content|article)|advertorial|付费推广|付費推廣|广告软文|廣告軟文/iu.test(lead)
+    || /(?:honou?rs?|award) .*?(?:leadership|recipients)|leadership award/iu.test(input.sourceTitle)) return null;
   const topic = classifyBatteryTopic(input.sourceId, input.sourceTitle, (input.summary ?? "").slice(0, 300));
   if (!allowsBatteryTopic(input.sourceId, topic)) return null;
   if (!["nvidia-news", "nvidia-blog", "nvidia-developer", "nvidia-research"].includes(input.sourceId)) {
