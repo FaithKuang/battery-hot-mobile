@@ -6,7 +6,7 @@ import { type PagesItem, publicItem } from "./pages-model.ts";
 /** The Pages exit uses the same public read boundary as the live site, never a database dump. */
 export async function loadPagesItems(now = new Date()): Promise<PagesItem[]> {
   const rows = await sql<Array<ItemRow & { source_title: string; topic: PagesItem["topic"]; battery_kind: PagesItem["kind"];
-    aidc_priority: 0 | 1 | 2; aidc_companies: string[]; peer_sources: PagesItem["sources"];
+    aidc_priority: 0 | 1 | 2 | 3; aidc_companies: string[]; peer_sources: PagesItem["sources"];
     key_facts: Array<{ textZh: string; evidenceQuote: string; sourceUrl: string }> | null }>>`
     SELECT ${ITEM_COLUMNS}, a.title AS source_title, x.output->>'topic' AS topic,
       x.output->>'batteryKind' AS battery_kind, p.aidc_priority, p.aidc_companies,

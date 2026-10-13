@@ -23,7 +23,7 @@ export interface PagesItem {
   summary: string | null;
   score: number | null;
   facts: Array<{ text: string; quote: string; url: string }>;
-  aidcPriority: 0 | 1 | 2;
+  aidcPriority: 0 | 1 | 2 | 3;
   companies: string[];
   sources: Array<{ name: string; url: string }>;
 }
@@ -65,7 +65,8 @@ export function publicItem(input: PagesItem, curatedIds: Set<string>, now: Date)
     const aidc = /data[\s-]?cent(?:er|re)s?|AI factor(?:y|ies)|\baidc\b|数据中心|資料中心|智算|データセンター/iu.test(lead)
       && /power|\bups\b|\bbbu\b|\bhvdc\b|\bvdc\b|cooling|rack|network|interconnect|server|GPU|供电|供電|电源|電源|液冷|散热|散熱|机柜|機櫃|伺服器|服务器/iu.test(lead);
     const poweredApplication = topic === "battery-application" && /charg|electric range|battery.electric|续航|充电|充電|供电|供電/iu.test(lead);
-    if (!battery && !aidc && !poweredApplication) return null;
+    const technical = classifyAidcPublication(input.sourceId, input.sourceTitle).priority === 3;
+    if (!battery && !aidc && !poweredApplication && !technical) return null;
     if (/ukraine|russia|airstrike|missile strike|乌克兰|俄羅斯|俄罗斯|战况/iu.test(input.sourceTitle)
       && !battery && !/\bbbu\b|\bups\b|backup power|备电|備電/iu.test(lead)) return null;
   }
@@ -123,7 +124,8 @@ export function mergePagesItems(previous: PagesItem[], fresh: PagesItem[], curat
     const sources = [...new Map([...match.sources, ...item.sources].map(s => [s.url, s])).values()];
     const publishedAt = match.publishedAt;
     const companies = [...new Set([...match.companies, ...item.companies])];
-    const priority = Math.max(match.aidcPriority, item.aidcPriority) as 0 | 1 | 2;
+    const priority = match.aidcPriority === 2 || item.aidcPriority === 2 ? 2
+      : Math.max(match.aidcPriority, item.aidcPriority) as 0 | 1 | 2 | 3;
     if (rank[item.kind] > rank[match.kind]) Object.assign(match, item);
     Object.assign(match, { sources, publishedAt, companies, aidcPriority: priority });
   }

@@ -26,6 +26,7 @@ export function classifyBatteryTopic(sourceId: string, title: string, evidence: 
   if (["nvidia-news", "nvidia-blog", "nvidia-developer", "nvidia-research"].includes(sourceId)) return "nvidia-monitoring";
   const aidc = classifyAidc(sourceId, title, evidence);
   if (aidc.priority === 2) return "ai-data-center-backup";
+  if (aidc.priority === 3) return "aidc-infrastructure";
   if (dataCenter.test(text) && power.test(text)) return "ai-data-center-backup";
   if (aidc.priority === 1) return "aidc-infrastructure";
   if (application.test(text) && (cell.test(text) || power.test(text) || /charg|power supply|续航|充电|供电|功率/iu.test(text))) {

@@ -7,6 +7,7 @@ export type SourceKind = "rss" | "web_list" | "json_list" | "x_search" | "mp_acc
 export interface AidcResponse {
   company: string | null;
   bbu: { items: FeedItemSummary[]; total: number; page: number; pageCount: number };
+  technical: { items: FeedItemSummary[]; total: number; page: number; pageCount: number };
   latest: { items: FeedItemSummary[]; total: number; page: number; pageCount: number };
   sources: Array<{ id: string; name: string; company: string; url: string; enabled: boolean; lastOkAt: string | null; state: "pending" | "paused" | "error" | "ok" }>;
   community: {

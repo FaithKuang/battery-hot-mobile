@@ -232,9 +232,12 @@ export async function publishArticleTx(tx: Tx, articleId: string, options: Publi
   const searchText = collapseWhitespace(
     [title, originalTitle, summary, source.name, ...displayTags(tags), ...(analysis?.subjects ?? [])].filter(Boolean).join(" "),
   ).toLowerCase();
-  const aidc = batteryMode
+  let aidc = batteryMode
     ? analysis?.output?.aidc ?? classifyAidcPublication(source.id, article.title, summary ?? "")
     : { priority: 0, companies: [] };
+  // New reading-priority rules also apply to retained analyses; existing direct BBU evidence wins.
+  const currentAidc = batteryMode ? classifyAidcPublication(source.id, article.title, summary ?? "") : aidc;
+  if (currentAidc.priority === 3 && aidc.priority !== 2) aidc = currentAidc;
 
   // A selected item sits at its reading group's anchor: the earliest public pool member of its fact.
   let sortAt: Date = batteryMode ? (article.published_at ?? article.timeline_at) : article.timeline_at;

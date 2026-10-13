@@ -68,3 +68,31 @@ test("Pages excludes explicit sponsored articles and leadership award announceme
   assert.equal(publicItem(item({ sourceTitle: "BCI honours first NextGen Leadership Award recipients at Philadelphia event",
     summary: "Battery Council International has formally honoured the inaugural recipients." }), curated, now), null);
 });
+
+test("Pages reclassifies saved official technical reports without leaking headline inference", () => {
+  const sources = new Set([...curated, "ocp-whitepapers", "ocp-blog", "delta-press"]);
+  for (const [sourceId, title] of [["ocp-whitepapers", "White Paper: Time Synchronization in AI Distributed Infrastructure v0.9.1"],
+    ["ocp-blog", "Introducing OSPA: Unifying the Switch Platform Layer for Open Networking"],
+    ["delta-press", "Technical report: reference architecture for AI servers"]]) {
+    const result = publicItem(item({ sourceId, title, sourceTitle: title, topic: "aidc-infrastructure", aidcPriority: 0 }), sources, now)!;
+    assert.ok(result); assert.equal(result.aidcPriority, 3); assert.equal(result.kind, "headline-only");
+    assert.equal(result.summary, null); assert.equal(result.score, null); assert.deepEqual(result.facts, []);
+  }
+  const title = "AI data center sustainability report";
+  assert.equal(publicItem(item({ sourceId: "ocp-blog", title, sourceTitle: title, topic: "aidc-infrastructure" }), sources, now), null);
+  const missingTime = item({ sourceId: "ocp-whitepapers", publishedAt: "", topic: "aidc-infrastructure" });
+  assert.equal(publicItem(missingTime, sources, now), null);
+});
+
+test("different OCP white papers remain separate while duplicate report titles merge", () => {
+  const sources = new Set(["ocp-whitepapers"]);
+  const report = (title: string, slug: string) => item({ sourceId: "ocp-whitepapers", title, sourceTitle: title,
+    topic: "aidc-infrastructure", sources: [{ name: "OCP", url: `https://www.opencompute.org/contributions/ref/${slug}/` }] });
+  const thermal = report("White Paper: Thermal Boundaries in AI Infrastructure", "thermal");
+  const timing = report("White Paper: Time Synchronization in AI Distributed Infrastructure v0.9.1", "timing");
+  const duplicate = report(thermal.title, "thermal-copy");
+  const result = mergePagesItems([], [thermal, timing, duplicate], sources, now);
+  assert.equal(result.length, 2);
+  assert.equal(result.find(i => i.title === thermal.title)!.sources.length, 2);
+  assert.equal(result.find(i => i.title === timing.title)!.sources.length, 1);
+});

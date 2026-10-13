@@ -1,8 +1,8 @@
 // Static reader: only same-origin public JSON. No account, backend or model calls in a phone browser.
 const $ = id => document.getElementById(id);
-const companies = [{ id: "simplo", name: "新普科技" }, { id: "aes", name: "AES-KY" }, { id: "dynapack", name: "顺达" }, { id: "delta", name: "台达" }, { id: "liteon", name: "光宝" }, { id: "stl", name: "新盛力" }, { id: "nvidia", name: "NVIDIA" }];
+const companies = [{ id: "simplo", name: "新普科技" }, { id: "aes", name: "AES-KY" }, { id: "dynapack", name: "顺达" }, { id: "delta", name: "台达" }, { id: "liteon", name: "光宝" }, { id: "stl", name: "新盛力" }, { id: "nvidia", name: "NVIDIA" }, { id: "ocp", name: "OCP" }];
 const titles = { all: "全部动态", aidc: "AIDC / BBU", nvidia: "NVIDIA 独立监控", selected: "严格精选", daily: "每日简报", notice: "使用与隐私说明" };
-const descriptions = { all: "先看到可信日期和直达原文；正文可核验时再展示摘录或精华总结。", aidc: "AI 数据中心基础设施与重点企业动态。直接涉及电池备援 BBU 的消息优先展示。", nvidia: "仅监控 NVIDIA 官方新闻、博客、开发者与研究四路来源，不是完整历史白皮书档案。", selected: "双语标题、中文概览、关键事实和正文证据齐全，且通过五维代码评分，才进入此栏。", daily: "每天 09:00 批次生成，覆盖前一日北京时间 00:00—24:00；仅使用已核验精选。" };
+const descriptions = { all: "先看到可信日期和直达原文；正文可核验时再展示摘录或精华总结。", aidc: "重点信息包括 BBU，以及 NVIDIA、OCP、台达、光宝、顺达、新普科技、新盛力的官方技术博客、白皮书与报告。重点不等于严格精选；技术资料时间为官网发布 / 收录时间，版本以原文为准。", nvidia: "仅监控 NVIDIA 官方新闻、博客、开发者与研究四路来源，不是完整历史白皮书档案。", selected: "双语标题、中文概览、关键事实和正文证据齐全，且通过五维代码评分，才进入此栏。", daily: "每天 09:00 批次生成，覆盖前一日北京时间 00:00—24:00；仅使用已核验精选。" };
 let snapshot = null, visible = 40;
 const el = (tag, text, cls) => { const node = document.createElement(tag); if (text != null) node.textContent = text; if (cls) node.className = cls; return node; };
 const date = value => new Date(value).toLocaleString("zh-CN", { timeZone: "Asia/Shanghai", year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", hour12: false });
@@ -13,6 +13,8 @@ function card(item) {
   const meta = el("div", null, "meta");
   meta.append(el("span", date(item.publishedAt)), el("span", item.sources[0].name), el("span", ({ "headline-only": "标题快讯", "extract-only": "原文摘录", summarized: "精华总结", selected: "精选" })[item.kind], "type"));
   // Importance in the AIDC list is deliberately not an editorial score.
+  if (item.aidcPriority === 2) meta.append(el("span", "BBU 重点", "type"));
+  if (item.aidcPriority === 3) meta.append(el("span", "技术博客 / 报告", "type"));
   if (item.kind === "selected") meta.append(el("span", `编辑分 ${item.score}`));
   const h3 = el("h3"); h3.append(link(item.title, item.sources[0].url)); article.append(meta, h3);
   if (item.originalTitle && item.originalTitle !== item.title) article.append(el("p", item.originalTitle, "original"));
@@ -54,7 +56,7 @@ function render() {
   $("controls").hidden = key === "daily" || key === "notice"; $("companies").hidden = key !== "aidc"; $("source-status").hidden = key === "notice";
   document.querySelectorAll(".navigation a").forEach(a => { if (a.hash === `#${key}`) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
   $("companies").replaceChildren();
-  for (const c of [{ id: null, name: "全部企业" }, ...companies]) {
+  for (const c of [{ id: null, name: "全部企业 / 机构" }, ...companies]) {
     const button = el("button", c.name); button.setAttribute("aria-pressed", String(c.id === company));
     button.onclick = () => { location.hash = `aidc${c.id ? `?company=${c.id}` : ""}`; }; $("companies").append(button);
   }
@@ -67,7 +69,7 @@ function render() {
   $("count").textContent = key === "daily" || key === "notice" ? "" : `${items.length} 条动态`;
   $("more").hidden = items.length <= visible || ["daily", "notice"].includes(key);
   if (key === "aidc") {
-    content.append(section("BBU 重点", items.filter(i => i.aidcPriority === 2), "bbu-section"), section("AIDC 最新", items.filter(i => i.aidcPriority === 1)), community(company));
+    content.append(el("h2", "重点信息", "section-title"), section("BBU 电池备援", items.filter(i => i.aidcPriority === 2), "bbu-section"), section("技术博客 / 白皮书 / 报告", items.filter(i => i.aidcPriority === 3), "bbu-section"), section("AIDC 最新", items.filter(i => i.aidcPriority === 1)), community(company));
   } else if (key === "daily") {
     for (const report of snapshot.reports) {
       const box = el("section"); box.append(el("h2", `早报 · ${report.date}`, "section-title"));

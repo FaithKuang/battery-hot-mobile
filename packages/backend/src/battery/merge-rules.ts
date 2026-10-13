@@ -1,4 +1,4 @@
-// Ported without changing the merge decision from Battery Hot lib/rules.ts.
+// Legacy Battery Hot merge rules, with a conservative guard for distinct technical documents.
 export function normalizeText(value: string) {
   return value
     .toLowerCase()
@@ -31,6 +31,11 @@ export function shouldMergeEvents(
   rightOrganizations: string[] = []
 ) {
   if (leftSignature === rightSignature) return true;
+  // "White Paper", "AI" and "Infrastructure" describe a document family, not one event.
+  // Keep weakly similar technical reports separate instead of hiding different reports.
+  const technicalDocument = /white[\s-]?paper|technical (?:report|paper)|research paper|白皮[书書]|技[术術](?:报告|報告)/iu;
+  if (technicalDocument.test(leftTitle) && technicalDocument.test(rightTitle)
+    && jaccardSimilarity(leftTitle, rightTitle) < 0.64) return false;
   const left = leftSignature.split("|");
   const right = rightSignature.split("|");
   const leftTokens = eventTokens(leftTitle);
@@ -292,5 +297,4 @@ function routeAppearsInTitle(route: string, title: string) {
   if (route === "lithium-metal") return /(lithium.?metal|锂金属)/.test(normalized);
   return normalized.includes(route);
 }
-
 

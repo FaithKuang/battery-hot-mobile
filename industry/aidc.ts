@@ -7,4 +7,5 @@ export const AIDC_COMPANIES = [
   { id: "liteon", name: "光宝", sources: ["liteon-news", "liteon-media"], pattern: /lite[-\s]?on|光寶|光宝/iu },
   { id: "stl", name: "新盛力", sources: ["stl-news"], pattern: /新盛力|STL Technology|STL Battery/iu },
   { id: "nvidia", name: "NVIDIA", sources: ["nvidia-news", "nvidia-blog", "nvidia-developer", "nvidia-research"], pattern: /NVIDIA|英伟达|輝達|英偉達/iu },
+  { id: "ocp", name: "OCP", sources: ["ocp-blog", "ocp-whitepapers"], pattern: /Open Compute Project|\bOCP\b/iu },
 ] as const;

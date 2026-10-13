@@ -1823,6 +1823,33 @@
       "enabled": false
     },
     {
+      "id": "ocp-blog",
+      "name": "OCP · 官方技术博客",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.opencompute.org/feed/",
+        "allowUrlPrefixes": ["https://www.opencompute.org/news/"],
+        "_aihot": { "initialBackfillLimit": 10 },
+        "ingestNoiseFilter": { "dropMarkersTitleOnly": ["Explore 22 Tracks", "Demo Lineup", "moving to a new location", "By the Numbers", "OCP Nexus", "Premier Open Infrastructure Event"] }
+      },
+      "tier": "T1", "first_party": true, "owner_entity_id": "ocp",
+      "participation_mode": "editorial", "interval_minutes": 1440, "tags": ["OCP", "技术博客"],
+      "site_fulltext": false, "syndicate_fulltext": false, "enabled": true
+    },
+    {
+      "id": "ocp-whitepapers",
+      "name": "OCP · 官方白皮书与技术报告",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.opencompute.org/contribution-type/white-paper/feed/",
+        "allowUrlPrefixes": ["https://www.opencompute.org/contributions/ref/"],
+        "_aihot": { "initialBackfillLimit": 10 }
+      },
+      "tier": "T1", "first_party": true, "owner_entity_id": "ocp",
+      "participation_mode": "editorial", "interval_minutes": 1440, "tags": ["OCP", "白皮书", "技术报告"],
+      "site_fulltext": false, "syndicate_fulltext": false, "enabled": true
+    },
+    {
       "id": "simplo-news",
       "name": "新普科技 · 官方新闻",
       "kind": "web_list",

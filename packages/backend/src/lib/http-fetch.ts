@@ -5,6 +5,7 @@ import { Agent, ProxyAgent, fetch as undiciFetch, type Dispatcher } from "undici
 import { config } from "../config.ts";
 import { assertPublicUrl, guardedLookup } from "./url.ts";
 import { SITE } from "@aihot/industry/site";
+import { setTimeout as delay } from "node:timers/promises";
 
 /**
  * Where a request leaves the host. "egress" (collection, bodies, images and leaderboard data) goes
@@ -58,8 +59,17 @@ export interface GuardedResponse {
 
 /** How the collectors introduce themselves: the site's own crawler name and address (industry/site.ts). */
 export const DEFAULT_UA = `Mozilla/5.0 (compatible; ${SITE.crawlerName}/1.0; +${config.siteUrl}/about)`;
+let nextOcpRequest = 0;
+async function waitForOcp(url: URL, signal?: AbortSignal) {
+  if (url.hostname !== "www.opencompute.org" && url.hostname !== "opencompute.org") return;
+  const slot = Math.max(Date.now(), nextOcpRequest);
+  nextOcpRequest = slot + 10_000;
+  await delay(Math.max(0, slot - Date.now()), undefined, { signal });
+}
 
 export async function guardedFetch(input: string, opts: GuardedFetchOptions = {}): Promise<GuardedResponse> {
+  // Courtesy queueing precedes the network deadline, so concurrent OCP feeds do not time out waiting.
+  await waitForOcp(new URL(input));
   // One budget includes DNS, every redirect and the body. Restarting it at each hop allowed a
   // nominal 20 s image request to occupy the API for minutes.
   const signal = AbortSignal.timeout(opts.timeoutMs ?? 20_000);
@@ -71,6 +81,8 @@ export async function guardedFetch(input: string, opts: GuardedFetchOptions = {}
   const maxRedirects = opts.maxRedirects ?? 5;
   const maxBytes = opts.maxBytes ?? 8 * 1024 * 1024;
   for (let hop = 0; ; hop++) {
+    // OCP robots.txt requests Crawl-delay: 10, including concurrent feeds and PDF redirects.
+    if (hop > 0) await waitForOcp(url, signal);
     const res = await undiciFetch(url, {
       method: opts.method ?? "GET",
       headers: { "user-agent": DEFAULT_UA, "accept-language": "zh-CN,zh;q=0.9,en;q=0.8", ...(opts.headers ?? {}) },

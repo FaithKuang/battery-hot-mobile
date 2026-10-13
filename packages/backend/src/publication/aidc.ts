@@ -7,7 +7,7 @@ import { ITEM_COLUMNS, ITEM_FROM, listedCondition, toFeedItemSummary, type ItemR
 const PAGE_SIZE = 20;
 
 /** Same visibility, deduplication and headline projection as every other public surface. */
-export async function loadAidc(company: string | null, bbuPage = 1, page = 1, now = new Date()): Promise<AidcResponse> {
+export async function loadAidc(company: string | null, bbuPage = 1, page = 1, now = new Date(), technicalPage = 1): Promise<AidcResponse> {
   const companyCondition = company ? sql`AND p.aidc_companies @> ${[company]}::text[]` : sql``;
   const section = async (priority: number, requested: number) => {
     const [{ count }] = await sql<{ count: number }[]>`
@@ -22,8 +22,8 @@ export async function loadAidc(company: string | null, bbuPage = 1, page = 1, no
     return { items: rows.map(toFeedItemSummary), total: count!, page: current, pageCount };
   };
   const ids = AIDC_COMPANIES.flatMap(c => c.sources);
-  const [bbu, latest, sources, signals, checks] = await Promise.all([
-    section(2, bbuPage), section(1, page),
+  const [bbu, technical, latest, sources, signals, checks] = await Promise.all([
+    section(2, bbuPage), section(3, technicalPage), section(1, page),
     sql<{ id: string; name: string; config: Record<string, string>; enabled: boolean; last_ok_at: Date | null; last_error: string | null }[]>`
       SELECT id, name, config, enabled, last_ok_at, last_error FROM sources WHERE id IN ${sql(ids)} ORDER BY id`,
     sql<{ post_id: string; url: string; title: string; excerpt: string; companies: string[]; topic: "bbu" | "cbu" | "backup-power"; published_at: Date }[]>`
@@ -34,7 +34,7 @@ export async function loadAidc(company: string | null, bbuPage = 1, page = 1, no
     sql<{ checked_at: Date; result: { state: "ok" | "partial" | "error" } }[]>`
       SELECT checked_at,result FROM battery_account_checks WHERE account_id=${BBU_ACCOUNT.id}`,
   ]);
-  return { company, bbu, latest, community: {
+  return { company, bbu, technical, latest, community: {
     account: { name: BBU_ACCOUNT.name, url: BBU_ACCOUNT.url, checkedAt: checks[0]?.checked_at.toISOString() ?? null,
       state: checks[0]?.result.state ?? "pending" },
     items: signals.map(s => ({ id: s.post_id, url: s.url, title: s.title, excerpt: s.excerpt, companies: s.companies,
