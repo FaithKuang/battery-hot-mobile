@@ -1700,6 +1700,50 @@
       "enabled": true
     },
     {
+      "id": "delta-americas-news",
+      "name": "Delta Americas · 官方新闻",
+      "kind": "json_list",
+      "config": {
+        "url": "https://www.delta-americas.com/api/newslist.ashx?sort_expr=cdate&sort_dir=DESC&page=1&lan=en-us&typeid=1,2,3,5,6,10",
+        "itemsPath": "data",
+        "titlePaths": ["Title"],
+        "summaryPaths": ["memo"],
+        "publishedAtPath": "Pub_Date",
+        "publishedAtUtcOffset": "+00:00",
+        "externalIdPath": "ID",
+        "urlTemplate": "https://www.delta-americas.com/en-US/news/{ID}",
+        "allowUrlPrefixes": ["https://www.delta-americas.com/en-US/news/"],
+        "sortByPublishedAt": true,
+        "detail": { "maxFetches": 10, "titleSelector": "h1", "titleAuthoritative": true },
+        "_aihot": { "initialBackfillLimit": 10 }
+      },
+      "tier": "T1", "first_party": true, "participation_mode": "editorial",
+      "interval_minutes": 1440, "tags": ["Delta", "AIDC", "Power Rack", "BBU"],
+      "site_fulltext": false, "syndicate_fulltext": false, "enabled": true
+    },
+    {
+      "id": "delta-americas-blog",
+      "name": "Delta Americas · 官方技术博客",
+      "kind": "json_list",
+      "config": {
+        "url": "https://www.delta-americas.com/api/newslist.ashx?sort_expr=cdate&sort_dir=DESC&page=1&lan=en-us&typeid=8",
+        "itemsPath": "data",
+        "titlePaths": ["Title"],
+        "summaryPaths": ["memo"],
+        "publishedAtPath": "Pub_Date",
+        "publishedAtUtcOffset": "+00:00",
+        "externalIdPath": "ID",
+        "urlTemplate": "https://www.delta-americas.com/en-US/news/{ID}",
+        "allowUrlPrefixes": ["https://www.delta-americas.com/en-US/news/"],
+        "sortByPublishedAt": true,
+        "detail": { "maxFetches": 10, "titleSelector": "h1", "titleAuthoritative": true },
+        "_aihot": { "initialBackfillLimit": 10 }
+      },
+      "tier": "T1", "first_party": true, "participation_mode": "editorial",
+      "interval_minutes": 1440, "tags": ["Delta", "AIDC", "技术博客"],
+      "site_fulltext": false, "syndicate_fulltext": false, "enabled": true
+    },
+    {
       "id": "delta-brandnews",
       "name": "Delta Brand News",
       "kind": "web_list",

@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 import { publicItem, publicUrl, mergePagesItems, pagesReport, type PagesItem } from "@aihot/backend/publication/pages-model";
+import { decideFreePublication } from "@aihot/backend/battery/free-publication";
 
 const now = new Date("2026-10-12T01:00:00Z");
 const curated = new Set(["catl", "other", "nvidia-news"]);
@@ -95,4 +96,24 @@ test("different OCP white papers remain separate while duplicate report titles m
   assert.equal(result.length, 2);
   assert.equal(result.find(i => i.title === thermal.title)!.sources.length, 2);
   assert.equal(result.find(i => i.title === timing.title)!.sources.length, 1);
+});
+
+test("Delta power evidence survives free excerpt export without inferring BBU for headline-only cards", () => {
+  const sourceId = "delta-americas-news";
+  const title = "Delta Bridges Energy and Compute for AI Factories Based on NVIDIA DSX";
+  const quote = "High-density In-Row systems deliver up to 800 kW in a single power rack, while tailored battery and capacitance backup technologies support transient stability.";
+  const decision = decideFreePublication({ source: { id: sourceId, name: "Delta Americas", curated: true, firstParty: true },
+    article: { title, url: "https://www.delta-americas.com/en-US/news/40258", publishedAt: "2026-09-17T00:00:00Z",
+      publishedAtEvidence: "feed", topic: "aidc-infrastructure", bodyText: "Company introduction. ".repeat(30) + quote } }, now);
+  assert.equal(decision.kind, "extract-only");
+  if (decision.kind !== "extract-only") throw new Error("expected source excerpt");
+  assert.equal(decision.excerpt.text, quote);
+  const sources = new Set([sourceId]);
+  const article = item({ sourceId, title, sourceTitle: title, publishedAt: "2026-09-17T00:00:00Z", topic: "aidc-infrastructure",
+    sources: [{ name: "Delta Americas", url: "https://www.delta-americas.com/en-US/news/40258" }],
+    kind: "extract-only", summary: `${decision.excerpt.label}：${decision.excerpt.text}` });
+  const result = publicItem(article, sources, now)!;
+  assert.equal(result.aidcPriority, 2); assert.equal(result.score, null); assert.deepEqual(result.facts, []);
+  // This title alone has no battery/power evidence: missing body cannot inherit BBU status.
+  assert.equal(publicItem({ ...article, kind: "headline-only", summary: null }, sources, now), null);
 });

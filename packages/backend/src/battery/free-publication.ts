@@ -1,4 +1,6 @@
-/** A dependency-free publication boundary for Battery Hot's free feed. */
+import { deltaPowerExcerpt } from "./aidc.ts";
+
+/** Publication boundary for Battery Hot's free feed. */
 export type BatteryTopic =
   | "battery-technology" | "battery-product" | "battery-policy"
   | "battery-application" | "ai-data-center-backup" | "openai-portable-hardware"
@@ -215,5 +217,5 @@ export function decideFreePublication(input: FreePublicationInput, now: Date): F
     titleZh: selected!.titleZh.trim(), titleEn: selected!.titleEn.trim(), summaryZh: selected!.summaryZh.trim(),
   };
 
-  return { kind: "extract-only", ...base, excerpt: { label: "原文摘录", text: body.slice(0, 240) } };
+  return { kind: "extract-only", ...base, excerpt: { label: "原文摘录", text: deltaPowerExcerpt(source.id, body) } };
 }
